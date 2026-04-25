@@ -75,7 +75,7 @@
         .results-header h2 { font-size: 20px; }
         .sort-select { border: none; color: var(--tg-blue); font-weight: bold; font-size: 14px; cursor: pointer; }
 
-        /* Flash Deals - EXACT MATCH TO IMAGE 2 */
+        /* Flash Deals */
         .flash-container { border: 3px solid var(--tg-blue); border-radius: 12px; overflow: hidden; margin-bottom: 30px; }
         .flash-header { 
             background: var(--flash-pink); padding: 10px 20px; border-bottom: 3px solid var(--tg-blue);
@@ -87,20 +87,20 @@
         
         .flash-deal-item { display: flex; border-bottom: 1px solid #eee; background: white; }
         .flash-deal-item:last-child { border-bottom: none; }
-        .flash-img { width: 200px; height: 130px; object-fit: cover; position: relative; }
+        .flash-img { width: 200px; height: 130px; object-fit: cover; position: relative; display: block;}
         .discount-tag { position: absolute; top: 10px; left: 10px; background: var(--tg-red); color: white; font-size: 10px; font-weight: bold; padding: 3px 8px; border-radius: 4px; }
         .flash-info { flex: 1; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
-        .flash-info h3 { font-size: 16px; margin-bottom: 4px; }
+        .flash-info h3 { font-size: 16px; margin-bottom: 4px; color: var(--tg-text); }
         .flash-info p { font-size: 12px; color: var(--tg-light-text); }
         .price-col { text-align: right; }
         .old-price { text-decoration: line-through; color: #999; font-size: 11px; }
         .new-price { font-size: 24px; font-weight: bold; color: var(--tg-red); }
-        .claim-btn { background: var(--tg-red); color: white; border: none; padding: 6px 18px; border-radius: 4px; font-weight: bold; cursor: pointer; margin-top: 5px; }
+        .claim-btn { background: var(--tg-red); color: white; border: none; padding: 6px 18px; border-radius: 4px; font-weight: bold; cursor: pointer; margin-top: 5px; display: inline-block; text-decoration: none; }
 
         /* Regular Hotel Cards */
         .hotel-card { display: flex; border: 1px solid var(--tg-border); border-radius: 12px; margin-bottom: 20px; overflow: hidden; transition: 0.2s; }
         .hotel-card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .card-img-wrap { width: 280px; height: 200px; position: relative; }
+        .card-img-wrap { width: 280px; height: 200px; position: relative; display: block; }
         .card-img { width: 100%; height: 100%; object-fit: cover; }
         .top-choice { position: absolute; top: 10px; left: 10px; background: var(--tg-blue); color: white; font-size: 11px; padding: 4px 10px; border-radius: 20px; display: flex; align-items: center; gap: 5px; }
         
@@ -115,8 +115,7 @@
         .rating-text span { display: block; font-weight: bold; font-size: 13px; color: var(--tg-blue); }
         .rating-text small { font-size: 10px; color: #999; }
         .score { background: var(--tg-blue); color: white; font-weight: bold; padding: 8px; border-radius: 6px 6px 6px 0; }
-        .book-btn { background: var(--tg-red); color: white; border: none; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%; }
-        
+        .book-btn { background: var(--tg-red); color: white; border: none; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%; display: block; text-decoration: none; text-align: center; }
 
         /* Pagination */
         .pagination { display: flex; justify-content: center; gap: 8px; margin: 40px 0; }
@@ -138,7 +137,7 @@
 
     <header>
         <div class="logo-nav-wrapper">
-            <a href="#" class="logo">T-Goda</a>
+            <a href="https://stream7812.github.io/HomePage/#" class="logo">T-Goda</a>
             <nav>
                 <ul>
                     <li><a href="#" class="active">Hotels</a></li>
@@ -175,60 +174,18 @@
 
     <div class="container">
         <aside class="sidebar">
+            <!-- Filter groups... (Rest unchanged) -->
             <div class="filter-group">
                 <h3><i class="fa-solid fa-sliders"></i> Filters</h3>
                 <h4>Price Range</h4>
                 <input type="range" class="price-slider">
                 <div style="display:flex; justify-content:space-between; font-size:11px;"><span>$0</span><span>$1000+</span></div>
             </div>
-
             <div class="filter-group">
                 <h4>Property Type</h4>
                 <label class="check-item"><input type="checkbox"> Hotels</label>
                 <label class="check-item"><input type="checkbox"> Resorts</label>
-                <label class="check-item"><input type="checkbox"> Apartments</label>
-                <label class="check-item"><input type="checkbox"> Villas</label>
             </div>
-
-            <div class="filter-group">
-                <h4>Star Rating</h4>
-                <label class="check-item"><input type="checkbox"> <span class="stars">★★★★★</span></label>
-                <label class="check-item"><input type="checkbox"> <span class="stars">★★★★</span></label>
-            </div>
-
-            <div class="filter-group">
-                <h4>Facilities</h4>
-                <label class="check-item"><input type="checkbox"> Free Wi-Fi</label>
-                <label class="check-item"><input type="checkbox"> Swimming Pool</label>
-                <label class="check-item"><input type="checkbox"> Fitness Center</label>
-                <label class="check-item"><input type="checkbox"> Spa</label>
-                <label class="check-item"><input type="checkbox"> Parking</label>
-                <label class="check-item"><input type="checkbox"> Pet Friendly</label>
-            </div>
-
-            <div class="filter-group">
-                <h4>Review Scores</h4>
-                <label class="check-item"><input type="checkbox"> Superb 9+</label>
-                <label class="check-item"><input type="checkbox"> Very Good 8+</label>
-                <label class="check-item"><input type="checkbox"> Good 7+</label>
-            </div>
-
-            <div class="filter-group">
-                <h4>Neighborhood</h4>
-                <label class="check-item"><input type="checkbox"> Patong</label>
-                <label class="check-item"><input type="checkbox"> Keron</label>
-                <label class="check-item"><input type="checkbox"> Kata</label>
-                <label class="check-item"><input type="checkbox"> Kamala</label>
-            </div>
-
-            <div class="filter-group">
-                <h4>Bed Type</h4>
-                <label class="check-item"><input type="checkbox"> Single</label>
-                <label class="check-item"><input type="checkbox"> Double</label>
-                <label class="check-item"><input type="checkbox"> King</label>
-            </div>
-
-
             <div class="map-box">
                 <button class="map-btn"><i class="fa-solid fa-map"></i> View on Map</button>
             </div>
@@ -240,162 +197,144 @@
                 <div class="sort-select">Sort by: Recommended <i class="fa-solid fa-chevron-down"></i></div>
             </div>
 
-            <!-- Flash Deals Redesigned to match image layout -->
+            <!-- Flash Deals -->
             <div class="flash-container">
                 <div class="flash-header">
                     <div class="flash-title"><i class="fa-solid fa-fire"></i> Flash Deals for You</div>
                     <div class="flash-timer">Ends in: <span class="timer-box">08</span> : <span class="timer-box">45</span> : <span class="timer-box">12</span></div>
                 </div>
                 
+                <!-- Flash Deal Item 1 -->
                 <div class="flash-deal-item">
-                    <div class="flash-img">
+                    <a href="https://stream7812.github.io/Room-Detail/" class="flash-img">
                         <img src="Mandala.png" class="card-img" alt="">
                         <div class="discount-tag">60% OFF</div>
-                    </div>
+                    </a>
                     <div class="flash-info">
                         <div>
                             <h3>Mandala Sky Luxury Villas <span class="stars">★★★★★</span></h3>
-                            <p><i class="fa-solid fa-location-dot"></i> Uluwatu, Bali • Cliff-top view</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Uluwatu, Bali</p>
                         </div>
                         <div class="price-col">
                             <div class="old-price">$1,200</div>
-                            <div class="new-price">$480<small style="font-size:11px; font-weight:normal; color:#666;">/night</small></div>
-                            <button class="claim-btn">Claim</button>
+                            <div class="new-price">$480</div>
+                            <a href="https://stream7812.github.io/Room-Detail/" class="claim-btn">Claim</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Flash Deal Item 2 -->
                 <div class="flash-deal-item">
-                    <div class="flash-img">
+                    <a href="https://stream7812.github.io/Room-Detail/" class="flash-img">
                         <img src="Emeraid.png" class="card-img" alt="">
                         <div class="discount-tag">45% OFF</div>
-                    </div>
+                    </a>
                     <div class="flash-info">
                         <div>
                             <h3>Emerald Jungle Retreat <span class="stars">★★★★</span></h3>
-                            <p><i class="fa-solid fa-location-dot"></i> Ubud, Bali • Private Sanctuary</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Ubud, Bali</p>
                         </div>
                         <div class="price-col">
                             <div class="old-price">$450</div>
-                            <div class="new-price">$247<small style="font-size:11px; font-weight:normal; color:#666;">/night</small></div>
-                            <button class="claim-btn">Claim</button>
+                            <div class="new-price">$247</div>
+                            <a href="https://stream7812.github.io/Room-Detail/" class="claim-btn">Claim</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Flash Deal Item 3 -->
                 <div class="flash-deal-item">
-                    <div class="flash-img">
+                    <a href="https://stream7812.github.io/Room-Detail/" class="flash-img">
                         <img src="Seminyak.png" class="card-img" alt="">
                         <div class="discount-tag">35% OFF</div>
-                    </div>
+                    </a>
                     <div class="flash-info">
                         <div>
                             <h3>Seminyak Shores Club <span class="stars">★★★★★</span></h3>
-                            <p><i class="fa-solid fa-location-dot"></i> Seminyak, Bali • Beachfront Bliss</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Seminyak, Bali</p>
                         </div>
                         <div class="price-col">
                             <div class="old-price">$680</div>
-                            <div class="new-price">$442<small style="font-size:11px; font-weight:normal; color:#666;">/night</small></div>
-                            <button class="claim-btn">Claim</button>
+                            <div class="new-price">$442</div>
+                            <a href="https://stream7812.github.io/Room-Detail/" class="claim-btn">Claim</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Standard Hotel Card -->
+            <!-- Hotel Card 1 -->
             <div class="hotel-card">
-                <div class="card-img-wrap">
+                <a href="https://stream7812.github.io/Room-Detail/" class="card-img-wrap">
                     <img src="Azure.png" class="card-img" alt="">
                     <div class="top-choice"><i class="fa-solid fa-circle-check"></i> Top Choice</div>
-                </div>
+                </a>
                 <div class="card-body">
                     <div class="card-details">
                         <h3>The Azure Serenity Resort <span class="stars">★★★★★</span></h3>
-                        <p class="card-loc"><i class="fa-solid fa-location-dot"></i> Ubud, Bali • 2.5 km from center</p>
-                        <div class="amenities">
-                            <span class="amenity-tag"><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
-                            <span class="amenity-tag"><i class="fa-solid fa-person-swimming"></i> Pool</span>
-                            <span class="amenity-tag"><i class="fa-solid fa-utensils"></i> Breakfast</span>
-                        </div>
-                        <p style="font-size:11px; color:var(--tg-red); margin-top:10px;">Only 2 rooms left at this price!</p>
+                        <p class="card-loc"><i class="fa-solid fa-location-dot"></i> Ubud, Bali</p>
                     </div>
                     <div class="card-pricing">
                         <div class="rating-box">
-                            <div class="rating-text"><span>8.9 Excellent</span><small>1,240 reviews</small></div>
+                            <div class="rating-text"><span>8.9 Excellent</span></div>
                             <div class="score">8.9</div>
                         </div>
                         <div>
-                            <div class="old-price">$320</div>
-                            <div class="new-price" style="color:var(--tg-red);">$284<small style="font-size:11px; font-weight:normal; color:#666;">/night</small></div>
-                            <button class="book-btn">Book Now</button>
+                            <div class="new-price">$284</div>
+                            <a href="https://stream7812.github.io/Room-Detail/" class="book-btn">Book Now</a>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Hotel Card 2 -->
             <div class="hotel-card">
-                <div class="card-img-wrap">
+                <a href="https://stream7812.github.io/Room-Detail/" class="card-img-wrap">
                     <img src="Lumina.png" class="card-img" alt="">
-                </div>
+                </a>
                 <div class="card-body">
                     <div class="card-details">
                         <h3>Lumina Beach Villas <span class="stars">★★★★</span></h3>
-                        <p class="card-loc"><i class="fa-solid fa-location-dot"></i> Seminyak,Bali • Beachfront</p>
-                        <div class="amenities">
-                            <span class="amenity-tag"> PrivateBeach</span>
-                            <span class="amenity-tag"> Spa</span>
-                        </div>
-                        <p style="font-size:11px; color:var(--tg-red); margin-top:10px;">Free cancellation before Oct 10</p>
+                        <p class="card-loc"><i class="fa-solid fa-location-dot"></i> Seminyak, Bali</p>
                     </div>
                     <div class="card-pricing">
                         <div class="rating-box">
-                            <div class="rating-text"><span>9.2 Exceptional</span><small>856 reviews</small></div>
+                            <div class="rating-text"><span>9.2 Exceptional</span></div>
                             <div class="score">9.2</div>
                         </div>
                         <div>
-                            <div class="new-price" style="color:var(--tg-red);">$415<small style="font-size:11px; font-weight:normal; color:#666;">/night</small></div>
-                            <button class="book-btn">Book Now</button>
+                            <div class="new-price">$415</div>
+                            <a href="https://stream7812.github.io/Room-Detail/" class="book-btn">Book Now</a>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Hotel Card 3 -->
             <div class="hotel-card">
-                <div class="card-img-wrap">
+                <a href="https://stream7812.github.io/Room-Detail/" class="card-img-wrap">
                     <img src="Palm.png" class="card-img" alt="">
-                </div>
+                </a>
                 <div class="card-body">
                     <div class="card-details">
                         <h3>The Palms Sanctuary <span class="stars">★★★★</span></h3>
-                        <p class="card-loc"><i class="fa-solid fa-location-dot"></i> Nusa Dua,Ball • 0.8 km from beach</p>
-                        <div class="amenities">
-                            <span class="amenity-tag"> Airport Shuttle</span>
-                            <span class="amenity-tag"> Gym</span>
-                        </div>
-                        <p style="font-size:11px; color:var(--tg-red); margin-top:10px;">Breakfast + Dinner deal available</p>
+                        <p class="card-loc"><i class="fa-solid fa-location-dot"></i> Nusa Dua, Bali</p>
                     </div>
                     <div class="card-pricing">
                         <div class="rating-box">
-                            <div class="rating-text"><span>8.4 Great</span><small>2,102 reviews</small></div>
+                            <div class="rating-text"><span>8.4 Great</span></div>
                             <div class="score">8.4</div>
                         </div>
                         <div>
-                            <div class="new-price" style="color:var(--tg-red);">$189<small style="font-size:11px; font-weight:normal; color:#666;">/night</small></div>
-                            <button class="book-btn">Book Now</button>
+                            <div class="new-price">$189</div>
+                            <a href="https://stream7812.github.io/Room-Detail/" class="book-btn">Book Now</a>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Pagination -->
             <div class="pagination">
-                <a href="#" class="pg-btn"><i class="fa-solid fa-chevron-left"></i></a>
                 <a href="#" class="pg-btn active">1</a>
                 <a href="#" class="pg-btn">2</a>
-                <a href="#" class="pg-btn">3</a>
-                <span style="align-self:center">...</span>
-                <a href="#" class="pg-btn">12</a>
-                <a href="#" class="pg-btn"><i class="fa-solid fa-chevron-right"></i></a>
             </div>
         </main>
     </div>
@@ -403,25 +342,20 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <h2>T-Goda</h2>
-                <p>Making world travel accessible, affordable, and delightful for everyone since 2024. Your journey starts here.</p>
+                <a href="https://stream7812.github.io/HomePage/#" class="logo">T-Goda</a>
+                <p>Making world travel accessible, affordable, and delightful for everyone since 2024.</p>
                 <div class="socials">
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-twitter"></i>
                 </div>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
-                <ul><li>About Us</li><li>Careers</li></ul>
+                <ul><li>About Us</li></ul>
             </div>
             <div class="footer-col">
                 <h4>Support</h4>
-                <ul><li>Support</li><li>Mobile App</li></ul>
-            </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <ul><li>Privacy Policy</li><li>Terms of Service</li></ul>
+                <ul><li>Support</li></ul>
             </div>
         </div>
     </footer>
